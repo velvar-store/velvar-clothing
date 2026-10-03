@@ -16,47 +16,6 @@ async function main() {
   console.log(`Created ${categories.length} categories.`)
 
   // 2. Create sample products with variants and price tiers
-  // Creating a Shirt
-  const shirtCat = categories.find(c => c.name === "Shirts")!
-
-  const product1 = await prisma.product.create({
-    data: {
-      name: "Classic Silk Shirt",
-      description: "Premium silk blend, perfect for evening wear or formal events.",
-      imageUrl: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
-      categoryId: shirtCat.id,
-      variants: {
-        create: [
-          {
-            size: "M",
-            color: "Black",
-            sku: "SH-SILK-BLK-M",
-            stockQuantity: 100,
-            priceTiers: {
-              create: [
-                { minQuantity: 1, pricePerUnit: 120.00 }, // Retail
-                { minQuantity: 12, pricePerUnit: 85.00 }  // Wholesale MOQ 12
-              ]
-            }
-          },
-          {
-            size: "L",
-            color: "White",
-            sku: "SH-SILK-WHT-L",
-            stockQuantity: 50,
-            priceTiers: {
-              create: [
-                { minQuantity: 1, pricePerUnit: 120.00 },
-                { minQuantity: 12, pricePerUnit: 85.00 }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  })
-
-  // Creating a Men's T-shirt
   const tshirtCat = categories.find(c => c.name === "Men's T-shirts")!
 
   const product5 = await prisma.product.create({
@@ -184,34 +143,7 @@ async function main() {
     }
   })
 
-  const hoodieCat = categories.find(c => c.name === "Hoodies")!
-
-  const product4 = await prisma.product.create({
-    data: {
-      name: "Velvar Heavyweight Drop-Shoulder Tactical Hoodie",
-      description: "Custom heavyweight cotton fleece with structured dropped shoulders, double-layered hood, and concealed side-seam pockets.",
-      imageUrl: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80",
-      categoryId: hoodieCat.id,
-      variants: {
-        create: [
-          {
-            size: "L",
-            color: "Black",
-            sku: "HD-TAC-BLK-L",
-            stockQuantity: 75,
-            priceTiers: {
-              create: [
-                { minQuantity: 1, pricePerUnit: 220.00 },
-                { minQuantity: 10, pricePerUnit: 85.00 }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  })
-
-  console.log(`Created products with ID: ${product1.id}, ${product5.id}, ${product6.id}, ${product7.id}, ${product8.id}, ${product9.id}, ${product4.id}`)
+  console.log(`Created products with ID: ${product5.id}, ${product6.id}, ${product7.id}, ${product8.id}, ${product9.id}`)
 }
 
 main()
