@@ -50,6 +50,7 @@ model Product {
   id          String           @id @default(uuid())
   name        String
   description String
+  imageUrl    String?
   categoryId  String
   category    Category         @relation(fields: [categoryId], references: [id])
   variants    ProductVariant[]

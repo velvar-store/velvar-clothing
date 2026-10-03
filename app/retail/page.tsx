@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const prisma = new PrismaClient()
 
@@ -38,6 +39,7 @@ export default async function RetailPage() {
         id: "mock-1",
         name: "Classic Silk Shirt",
         description: "Premium silk blend, perfect for evening wear or formal events.",
+        imageUrl: "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?q=80&w=1000&auto=format&fit=crop",
         categoryId: "cat-1",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -53,6 +55,7 @@ export default async function RetailPage() {
         id: "mock-2",
         name: "Essential Heavyweight Tee",
         description: "Ultra-premium 280gsm cotton oversized t-shirt with dropped shoulders.",
+        imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop",
         categoryId: "cat-2",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -68,6 +71,7 @@ export default async function RetailPage() {
         id: "mock-3",
         name: "Luxury Velvet Hoodie",
         description: "Plush velvet blend hoodie for unmatched comfort and style.",
+        imageUrl: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1000&auto=format&fit=crop",
         categoryId: "cat-3",
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -95,7 +99,17 @@ export default async function RetailPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {products.map(product => (
-          <Card key={product.id} className="bg-white/5 border-white/10 rounded-none text-white">
+          <Card key={product.id} className="bg-white/5 border-white/10 rounded-none text-white overflow-hidden group">
+            {product.imageUrl && (
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
+                <Image
+                  src={product.imageUrl}
+                  alt={product.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle className="text-xl tracking-wider">{product.name}</CardTitle>

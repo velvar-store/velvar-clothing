@@ -23,6 +23,7 @@ async function main() {
     data: {
       name: "Classic Silk Shirt",
       description: "Premium silk blend, perfect for evening wear or formal events.",
+      imageUrl: "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?q=80&w=1000&auto=format&fit=crop",
       categoryId: shirtCat.id,
       variants: {
         create: [
@@ -62,6 +63,7 @@ async function main() {
     data: {
       name: "Essential Heavyweight Tee",
       description: "Ultra-premium 280gsm cotton t-shirt with dropped shoulders.",
+      imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop",
       categoryId: tshirtCat.id,
       variants: {
         create: [
