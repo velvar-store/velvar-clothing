@@ -20,7 +20,7 @@ export default function Home() {
       {/* Hero Section */}
       <main className="flex flex-col items-center justify-center text-center px-4 py-32 space-y-8">
         <Badge variant="outline" className="border-white/20 text-white tracking-widest">
-          NEW COLLECTION 2024
+          NEW COLLECTION 2026
         </Badge>
 
         <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9]">
