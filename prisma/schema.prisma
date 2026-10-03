@@ -50,7 +50,7 @@ model Product {
   id          String           @id @default(uuid())
   name        String
   description String
-  imageUrl    String?
+  images      String[]         @default([])
   categoryId  String
   category    Category         @relation(fields: [categoryId], references: [id])
   variants    ProductVariant[]
@@ -73,13 +73,13 @@ model ProductVariant {
 }
 
 model PriceTier {
-  id            String         @id @default(uuid())
-  variantId     String
-  variant       ProductVariant @relation(fields: [variantId], references: [id])
-  minQuantity   Int            @default(1)
-  pricePerUnit  Float
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  id           String         @id @default(uuid())
+  variantId    String
+  variant      ProductVariant @relation(fields: [variantId], references: [id])
+  minQuantity  Int            @default(1)
+  pricePerUnit Float
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
 }
 
 enum OrderStatus {
@@ -109,7 +109,7 @@ model OrderItem {
   variantId String
   variant   ProductVariant @relation(fields: [variantId], references: [id])
   quantity  Int
-  price     Float          // Captured price at time of order
+  price     Float // Captured price at time of order
   createdAt DateTime       @default(now())
   updatedAt DateTime       @updatedAt
 }
