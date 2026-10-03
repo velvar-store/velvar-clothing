@@ -1,0 +1,18 @@
+
+> velvar@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.8 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 528ms
+✓ Running next.config.ts took 45ms
+
+○ Compiling / ...
+ GET / 200 in 4.0s (next.js: 3.7s, application-code: 352ms)
+ GET /retail 404 in 845ms (next.js: 810ms, application-code: 35ms)
+ GET /retail 404 in 116ms (next.js: 8ms, application-code: 108ms)
+ GET / 200 in 71ms (next.js: 12ms, application-code: 59ms)
+ GET /wholesale 404 in 31ms (next.js: 5ms, application-code: 26ms)
+ GET /wholesale 404 in 69ms (next.js: 11ms, application-code: 58ms)
+ GET / 200 in 45ms (next.js: 3ms, application-code: 41ms)
