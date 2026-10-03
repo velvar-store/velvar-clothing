@@ -38,54 +38,6 @@ export default async function WholesalePage() {
     // Fallback data if db is empty or disconnected
     products = [
       {
-        id: "mock-1",
-        name: "Classic Silk Shirt",
-        description: "Premium silk blend, perfect for evening wear or formal events.",
-        imageUrl: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
-        categoryId: "cat-1",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        category: { id: "cat-1", name: "Shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
-        variants: [
-          {
-            id: "var-1", productId: "mock-1", size: "M", color: "Black", sku: "SH-SILK-BLK-M", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
-            priceTiers: [{ id: "pt-1", variantId: "var-1", minQuantity: 12, pricePerUnit: 85.00, createdAt: new Date(), updatedAt: new Date() }]
-          }
-        ]
-      },
-      {
-        id: "mock-3",
-        name: "Luxury Velvet Hoodie",
-        description: "Plush velvet blend hoodie for unmatched comfort and style.",
-        imageUrl: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1000&auto=format&fit=crop",
-        categoryId: "cat-3",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        category: { id: "cat-3", name: "Hoodies", description: null, createdAt: new Date(), updatedAt: new Date() },
-        variants: [
-          {
-            id: "var-3", productId: "mock-3", size: "L", color: "Navy", sku: "HD-VLVT-NVY-L", stockQuantity: 50, createdAt: new Date(), updatedAt: new Date(),
-            priceTiers: [{ id: "pt-3", variantId: "var-3", minQuantity: 12, pricePerUnit: 120.00, createdAt: new Date(), updatedAt: new Date() }]
-          }
-        ]
-      },
-      {
-        id: "mock-5",
-        name: "Velvar Heavyweight Drop-Shoulder Tactical Hoodie",
-        description: "Custom heavyweight cotton fleece with structured dropped shoulders, double-layered hood, and concealed side-seam pockets.",
-        imageUrl: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80",
-        categoryId: "cat-3",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        category: { id: "cat-3", name: "Hoodies", description: null, createdAt: new Date(), updatedAt: new Date() },
-        variants: [
-          {
-            id: "var-5", productId: "mock-5", size: "L", color: "Black", sku: "HD-TAC-BLK-L", stockQuantity: 75, createdAt: new Date(), updatedAt: new Date(),
-            priceTiers: [{ id: "pt-5", variantId: "var-5", minQuantity: 10, pricePerUnit: 85.00, createdAt: new Date(), updatedAt: new Date() }]
-          }
-        ]
-      },
-      {
         id: "mock-6",
         name: "VELVAR Cyberpunk Graphic Drop-Shoulder Tee (White)",
         description: "500 GSM waffle-textured heavyweight cotton drop-shoulder tee with full 'ALWAYS CONFIDENT' anime/cyber back illustration.",
