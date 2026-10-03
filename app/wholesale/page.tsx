@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const prisma = new PrismaClient()
 
@@ -33,6 +34,60 @@ export default async function WholesalePage() {
     console.error("Database connection failed, showing empty state", e)
   }
 
+  if (!products || products.length === 0) {
+    // Fallback data if db is empty or disconnected
+    products = [
+      {
+        id: "mock-1",
+        name: "Classic Silk Shirt",
+        description: "Premium silk blend, perfect for evening wear or formal events.",
+        imageUrl: "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?q=80&w=1000&auto=format&fit=crop",
+        categoryId: "cat-1",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-1", name: "Shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-1", productId: "mock-1", size: "M", color: "Black", sku: "SH-SILK-BLK-M", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-1", variantId: "var-1", minQuantity: 12, pricePerUnit: 85.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      },
+      {
+        id: "mock-2",
+        name: "Essential Heavyweight Tee",
+        description: "Ultra-premium 280gsm cotton oversized t-shirt with dropped shoulders.",
+        imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop",
+        categoryId: "cat-2",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-2", productId: "mock-2", size: "L", color: "Charcoal", sku: "TS-HVY-CHAR-L", stockQuantity: 200, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-2", variantId: "var-2", minQuantity: 12, pricePerUnit: 25.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      },
+      {
+        id: "mock-3",
+        name: "Luxury Velvet Hoodie",
+        description: "Plush velvet blend hoodie for unmatched comfort and style.",
+        imageUrl: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1000&auto=format&fit=crop",
+        categoryId: "cat-3",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-3", name: "Hoodies", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-3", productId: "mock-3", size: "L", color: "Navy", sku: "HD-VLVT-NVY-L", stockQuantity: 50, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-3", variantId: "var-3", minQuantity: 12, pricePerUnit: 120.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      }
+    ] as unknown as Awaited<ReturnType<typeof getWholesaleProducts>>;
+  }
+
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <nav className="mb-12 flex justify-between items-center">
@@ -61,7 +116,17 @@ export default async function WholesalePage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {products.map(product => (
-          <Card key={product.id} className="bg-white/5 border-white/10 rounded-none text-white">
+          <Card key={product.id} className="bg-white/5 border-white/10 rounded-none text-white overflow-hidden group">
+            {product.imageUrl && (
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
+                <Image
+                  src={product.imageUrl}
+                  alt={product.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle className="text-2xl tracking-wider">{product.name}</CardTitle>
