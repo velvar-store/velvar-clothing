@@ -39,7 +39,7 @@ export default async function RetailPage() {
         id: "mock-1",
         name: "Classic Silk Shirt",
         description: "Premium silk blend, perfect for evening wear or formal events.",
-        imageUrl: "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?q=80&w=1000&auto=format&fit=crop",
+        imageUrl: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
         categoryId: "cat-1",
         createdAt: new Date(),
         updatedAt: new Date(),
