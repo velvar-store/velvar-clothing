@@ -52,22 +52,6 @@ export default async function RetailPage() {
         ]
       },
       {
-        id: "mock-2",
-        name: "Essential Heavyweight Tee",
-        description: "Ultra-premium 280gsm cotton oversized t-shirt with dropped shoulders.",
-        imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop",
-        categoryId: "cat-2",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
-        variants: [
-          {
-            id: "var-2", productId: "mock-2", size: "L", color: "Charcoal", sku: "TS-HVY-CHAR-L", stockQuantity: 200, createdAt: new Date(), updatedAt: new Date(),
-            priceTiers: [{ id: "pt-2", variantId: "var-2", minQuantity: 1, pricePerUnit: 45.00, createdAt: new Date(), updatedAt: new Date() }]
-          }
-        ]
-      },
-      {
         id: "mock-3",
         name: "Luxury Velvet Hoodie",
         description: "Plush velvet blend hoodie for unmatched comfort and style.",
@@ -84,22 +68,6 @@ export default async function RetailPage() {
         ]
       },
       {
-        id: "mock-4",
-        name: "Velvar Oversized Drop-Shoulder Boxy Tee",
-        description: "500 GSM heavyweight French Terry with dropped shoulder silhouette, raw hems, and pre-shrunk luxury wash.",
-        imageUrl: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
-        categoryId: "cat-2",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
-        variants: [
-          {
-            id: "var-4", productId: "mock-4", size: "L", color: "Black", sku: "TS-OVR-BLK-L", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
-            priceTiers: [{ id: "pt-4", variantId: "var-4", minQuantity: 1, pricePerUnit: 120.00, createdAt: new Date(), updatedAt: new Date() }]
-          }
-        ]
-      },
-      {
         id: "mock-5",
         name: "Velvar Heavyweight Drop-Shoulder Tactical Hoodie",
         description: "Custom heavyweight cotton fleece with structured dropped shoulders, double-layered hood, and concealed side-seam pockets.",
@@ -112,6 +80,54 @@ export default async function RetailPage() {
           {
             id: "var-5", productId: "mock-5", size: "L", color: "Black", sku: "HD-TAC-BLK-L", stockQuantity: 75, createdAt: new Date(), updatedAt: new Date(),
             priceTiers: [{ id: "pt-5", variantId: "var-5", minQuantity: 1, pricePerUnit: 220.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      },
+      {
+        id: "mock-6",
+        name: "VELVAR Cyberpunk Graphic Drop-Shoulder Tee (Black)",
+        description: "Heavyweight drop-shoulder silhouette featuring 'VELVAR - ALWAYS CONFIDENT' cyber-anime back print with minimal chest emblem.",
+        imageUrl: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+        categoryId: "cat-2",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-6", productId: "mock-6", size: "L", color: "Black", sku: "TS-CYB-BLK-L", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-6", variantId: "var-6", minQuantity: 1, pricePerUnit: 65.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      },
+      {
+        id: "mock-7",
+        name: "VELVAR Cyberpunk Graphic Drop-Shoulder Tee (White)",
+        description: "Waffle-textured premium cotton oversized drop-shoulder tee with full anime graphic illustration back.",
+        imageUrl: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=800&q=80",
+        categoryId: "cat-2",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-7", productId: "mock-7", size: "L", color: "White", sku: "TS-CYB-WHT-L", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-7", variantId: "var-7", minQuantity: 1, pricePerUnit: 65.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      },
+      {
+        id: "mock-8",
+        name: "VELVAR Minimalist Mountain Graphic Drop-Shoulder Tee",
+        description: "280 GSM luxury combed cotton with minimal front 'V' logo and high-density monochrome landscape back print.",
+        imageUrl: "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=800&q=80",
+        categoryId: "cat-2",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-8", productId: "mock-8", size: "L", color: "Grey", sku: "TS-MNT-GRY-L", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-8", variantId: "var-8", minQuantity: 1, pricePerUnit: 60.00, createdAt: new Date(), updatedAt: new Date() }]
           }
         ]
       }

@@ -59,23 +59,23 @@ async function main() {
   // Creating a Men's T-shirt
   const tshirtCat = categories.find(c => c.name === "Men's T-shirts")!
 
-  const product2 = await prisma.product.create({
+  const product5 = await prisma.product.create({
     data: {
-      name: "Essential Heavyweight Tee",
-      description: "Ultra-premium 280gsm cotton t-shirt with dropped shoulders.",
-      imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop",
+      name: "VELVAR Cyberpunk Graphic Drop-Shoulder Tee (Black)",
+      description: "Heavyweight drop-shoulder silhouette featuring 'VELVAR - ALWAYS CONFIDENT' cyber-anime back print with minimal chest emblem.",
+      imageUrl: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
       categoryId: tshirtCat.id,
       variants: {
         create: [
           {
             size: "L",
-            color: "Charcoal",
-            sku: "TS-HVY-CHAR-L",
-            stockQuantity: 200,
+            color: "Black",
+            sku: "TS-CYB-BLK-L",
+            stockQuantity: 100,
             priceTiers: {
               create: [
-                { minQuantity: 1, pricePerUnit: 45.00 }, // Retail
-                { minQuantity: 12, pricePerUnit: 25.00 } // Wholesale MOQ 12
+                { minQuantity: 1, pricePerUnit: 65.00 },
+                { minQuantity: 15, pricePerUnit: 28.00 }
               ]
             }
           }
@@ -84,23 +84,48 @@ async function main() {
     }
   })
 
-  const product3 = await prisma.product.create({
+  const product6 = await prisma.product.create({
     data: {
-      name: "Velvar Oversized Drop-Shoulder Boxy Tee",
-      description: "500 GSM heavyweight French Terry with dropped shoulder silhouette, raw hems, and pre-shrunk luxury wash.",
-      imageUrl: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+      name: "VELVAR Cyberpunk Graphic Drop-Shoulder Tee (White)",
+      description: "Waffle-textured premium cotton oversized drop-shoulder tee with full anime graphic illustration back.",
+      imageUrl: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=800&q=80",
       categoryId: tshirtCat.id,
       variants: {
         create: [
           {
             size: "L",
-            color: "Black",
-            sku: "TS-OVR-BLK-L",
+            color: "White",
+            sku: "TS-CYB-WHT-L",
             stockQuantity: 100,
             priceTiers: {
               create: [
-                { minQuantity: 1, pricePerUnit: 120.00 },
-                { minQuantity: 15, pricePerUnit: 45.00 }
+                { minQuantity: 1, pricePerUnit: 65.00 },
+                { minQuantity: 15, pricePerUnit: 28.00 }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  })
+
+  const product7 = await prisma.product.create({
+    data: {
+      name: "VELVAR Minimalist Mountain Graphic Drop-Shoulder Tee",
+      description: "280 GSM luxury combed cotton with minimal front 'V' logo and high-density monochrome landscape back print.",
+      imageUrl: "https://images.unsplash.com/photo-1527719327859-c6ce80353573?auto=format&fit=crop&w=800&q=80",
+      categoryId: tshirtCat.id,
+      variants: {
+        create: [
+          {
+            size: "L",
+            color: "Grey",
+            sku: "TS-MNT-GRY-L",
+            stockQuantity: 100,
+            priceTiers: {
+              create: [
+                { minQuantity: 1, pricePerUnit: 60.00 },
+                { minQuantity: 20, pricePerUnit: 25.00 }
               ]
             }
           }
@@ -136,7 +161,7 @@ async function main() {
     }
   })
 
-  console.log(`Created products with ID: ${product1.id}, ${product2.id}, ${product3.id}, ${product4.id}`)
+  console.log(`Created products with ID: ${product1.id}, ${product5.id}, ${product6.id}, ${product7.id}, ${product4.id}`)
 }
 
 main()
