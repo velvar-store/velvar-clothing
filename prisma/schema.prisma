@@ -37,19 +37,21 @@ model WholesaleProfile {
   updatedAt       DateTime @updatedAt
 }
 
-enum ProductCategory {
-  MENS_TSHIRT
-  HOODIES
-  SHIRTS
-  PANJABI
-  WOMENS_WEAR
+model Category {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  description String?
+  products    Product[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 model Product {
   id          String           @id @default(uuid())
   name        String
   description String
-  category    ProductCategory
+  categoryId  String
+  category    Category         @relation(fields: [categoryId], references: [id])
   variants    ProductVariant[]
   createdAt   DateTime         @default(now())
   updatedAt   DateTime         @updatedAt
