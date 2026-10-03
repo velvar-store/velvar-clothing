@@ -82,6 +82,38 @@ export default async function RetailPage() {
             priceTiers: [{ id: "pt-3", variantId: "var-3", minQuantity: 1, pricePerUnit: 185.00, createdAt: new Date(), updatedAt: new Date() }]
           }
         ]
+      },
+      {
+        id: "mock-4",
+        name: "Velvar Oversized Drop-Shoulder Boxy Tee",
+        description: "500 GSM heavyweight French Terry with dropped shoulder silhouette, raw hems, and pre-shrunk luxury wash.",
+        imageUrl: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+        categoryId: "cat-2",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-2", name: "Men's T-shirts", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-4", productId: "mock-4", size: "L", color: "Black", sku: "TS-OVR-BLK-L", stockQuantity: 100, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-4", variantId: "var-4", minQuantity: 1, pricePerUnit: 120.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
+      },
+      {
+        id: "mock-5",
+        name: "Velvar Heavyweight Drop-Shoulder Tactical Hoodie",
+        description: "Custom heavyweight cotton fleece with structured dropped shoulders, double-layered hood, and concealed side-seam pockets.",
+        imageUrl: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80",
+        categoryId: "cat-3",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        category: { id: "cat-3", name: "Hoodies", description: null, createdAt: new Date(), updatedAt: new Date() },
+        variants: [
+          {
+            id: "var-5", productId: "mock-5", size: "L", color: "Black", sku: "HD-TAC-BLK-L", stockQuantity: 75, createdAt: new Date(), updatedAt: new Date(),
+            priceTiers: [{ id: "pt-5", variantId: "var-5", minQuantity: 1, pricePerUnit: 220.00, createdAt: new Date(), updatedAt: new Date() }]
+          }
+        ]
       }
     ] as unknown as Awaited<ReturnType<typeof getRetailProducts>>;
   }

@@ -84,7 +84,59 @@ async function main() {
     }
   })
 
-  console.log(`Created products with ID: ${product1.id}, ${product2.id}`)
+  const product3 = await prisma.product.create({
+    data: {
+      name: "Velvar Oversized Drop-Shoulder Boxy Tee",
+      description: "500 GSM heavyweight French Terry with dropped shoulder silhouette, raw hems, and pre-shrunk luxury wash.",
+      imageUrl: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+      categoryId: tshirtCat.id,
+      variants: {
+        create: [
+          {
+            size: "L",
+            color: "Black",
+            sku: "TS-OVR-BLK-L",
+            stockQuantity: 100,
+            priceTiers: {
+              create: [
+                { minQuantity: 1, pricePerUnit: 120.00 },
+                { minQuantity: 15, pricePerUnit: 45.00 }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  })
+
+  const hoodieCat = categories.find(c => c.name === "Hoodies")!
+
+  const product4 = await prisma.product.create({
+    data: {
+      name: "Velvar Heavyweight Drop-Shoulder Tactical Hoodie",
+      description: "Custom heavyweight cotton fleece with structured dropped shoulders, double-layered hood, and concealed side-seam pockets.",
+      imageUrl: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80",
+      categoryId: hoodieCat.id,
+      variants: {
+        create: [
+          {
+            size: "L",
+            color: "Black",
+            sku: "HD-TAC-BLK-L",
+            stockQuantity: 75,
+            priceTiers: {
+              create: [
+                { minQuantity: 1, pricePerUnit: 220.00 },
+                { minQuantity: 10, pricePerUnit: 85.00 }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  })
+
+  console.log(`Created products with ID: ${product1.id}, ${product2.id}, ${product3.id}, ${product4.id}`)
 }
 
 main()
