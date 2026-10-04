@@ -45,66 +45,65 @@ const FALLBACK_IMAGE = 'https://placehold.co/800x1067/111111/FFFFFF?text=VELVAR'
 
 const PRODUCTS: Product[] = [
   {
-    id: 'velvar-cyber-white',
-    name: 'VELVAR Cyberpunk Graphic Drop-Shoulder Tee (White)',
+    id: 'velvar-oversized-tee',
+    name: 'Premium Oversized T-Shirt',
     category: 'T-Shirts',
-    retailPrice: 65,
-    wholesalePrice: 28,
+    retailPrice: 650,
+    wholesalePrice: 350,
     moq: 15,
     frontImage: 'https://i.ibb.co.com/zWwg6p7b/FB-IMG-1791020395770.jpg',
     backImage: 'https://i.ibb.co.com/7xydbyTM/FB-IMG-1791020400681.jpg',
-    description: '500 GSM waffle-textured heavyweight cotton drop-shoulder tee. Minimalist chest V emblem with full cyberpunk anime back piece.',
+    description: '500 GSM waffle-textured heavyweight cotton drop-shoulder tee. Features clean monochrome chest V emblem and full cyberpunk anime back print.',
     fit: 'Boxy Drop-Shoulder Oversized',
     composition: '100% Ring-spun Heavyweight Cotton (500 GSM)',
   },
   {
-    id: 'velvar-cyber-black',
-    name: 'VELVAR Cyberpunk Graphic Drop-Shoulder Tee (Black)',
-    category: 'T-Shirts',
-    retailPrice: 65,
-    wholesalePrice: 28,
-    moq: 15,
-    frontImage: 'https://i.ibb.co.com/DDkG0B3L/FB-IMG-1791020405761.jpg',
-    backImage: 'https://i.ibb.co.com/3yfyvcv0/FB-IMG-1791020398394.jpg',
-    description: 'Premium ribbed luxury black tee with signature chest monogram and dark cyberpunk graphic back print.',
-    fit: 'Engineered Drop-Shoulder',
-    composition: 'Ribbed Compact Cotton Blend (480 GSM)',
+    id: 'velvar-polo-shirt',
+    name: 'Premium Polo Shirt',
+    category: 'Polo Shirts',
+    retailPrice: 900,
+    wholesalePrice: 500,
+    moq: 12,
+    frontImage: 'https://images.unsplash.com/photo-1625910513413-730623315a6b?auto=format&fit=crop&w=800&q=80',
+    description: 'Structured pique cotton polo shirt crafted for a sharp contemporary luxury fit.',
+    fit: 'Modern Tailored Fit',
+    composition: '100% Pique Fine Cotton (240 GSM)',
   },
   {
-    id: 'velvar-mountain-tee',
-    name: 'VELVAR Mountain Landscape Graphic Drop-Shoulder Tee',
-    category: 'T-Shirts',
-    retailPrice: 60,
-    wholesalePrice: 26,
-    moq: 15,
-    frontImage: 'https://i.ibb.co.com/xqdnqqdY/FB-IMG-1791020375676.jpg',
-    description: "Contemporary streetwear tee showcasing 'SAME DREAMS BIGGER PLANS' mountain landscape graphic.",
-    fit: 'Relaxed Street Cut',
-    composition: '100% Combed Heavy Cotton (320 GSM)',
-  },
-  {
-    id: 'velvar-silk-shirt',
-    name: 'VELVAR Classic Silk Shirt',
-    category: 'Shirts',
-    retailPrice: 120,
-    wholesalePrice: 52,
+    id: 'velvar-cargo-pants',
+    name: 'Cargo Pants',
+    category: 'Pants',
+    retailPrice: 1200,
+    wholesalePrice: 700,
     moq: 10,
-    frontImage: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80',
-    description: 'Ultra-refined silk blend tailored with relaxed drop shoulders, ideal for evening wear.',
-    fit: 'Fluid Tailored Drape',
-    composition: '70% Mulberry Silk, 30% Cotton',
+    frontImage: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80',
+    description: 'Heavy utility tactical cargo pants with modular pocket arrangement and reinforced stitching.',
+    fit: 'Relaxed Tapered Cut',
+    composition: '98% Cotton Canvas, 2% Elastane',
   },
   {
-    id: 'velvar-velvet-hoodie',
-    name: 'VELVAR Heavyweight Velvet Hoodie',
-    category: 'Hoodies',
-    retailPrice: 185,
-    wholesalePrice: 75,
+    id: 'velvar-activewear-dryfit',
+    name: 'Activewear Dry-Fit T-Shirt',
+    category: 'Activewear',
+    retailPrice: 450,
+    wholesalePrice: 250,
+    moq: 20,
+    frontImage: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=800&q=80',
+    description: 'Ultra-lightweight moisture-wicking performance tee engineered for high intensity training.',
+    fit: 'Athletic Ergonomic Fit',
+    composition: '100% Micro-Poly Dry-Fit Fabric',
+  },
+  {
+    id: 'velvar-cotton-panjabi',
+    name: 'Premium Cotton Panjabi',
+    category: 'Traditional',
+    retailPrice: 1800,
+    wholesalePrice: 1000,
     moq: 10,
-    frontImage: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
-    description: 'Custom heavyweight cotton fleece with structured dropped shoulders and double-layered hood.',
-    fit: 'High-Density Structural Box Cut',
-    composition: 'Velvet Velour Fleece (550 GSM)',
+    frontImage: 'https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=80',
+    description: 'Refined handcrafted premium cotton panjabi with intricate minimal collar embroidery.',
+    fit: 'Classic Tailored Cut',
+    composition: '100% Egyptian Fine Cotton',
   },
 ];
 
@@ -259,76 +258,72 @@ export default function HomePage() {
       <header className="sticky top-0 z-40 border-b border-neutral-900 bg-black/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-6 sm:py-4">
           <div className="flex shrink-0 items-center gap-2">
-            <span className="text-lg font-black tracking-[0.18em] text-white sm:text-2xl">
-              VELVAR
+            <span className="font-serif text-lg font-black uppercase tracking-[0.15em] text-white sm:text-2xl">
+              VELVAR FASHION
             </span>
             <span className="rounded border border-neutral-800 bg-neutral-900 px-1.5 py-0.5 text-[8px] font-mono tracking-widest text-neutral-400 sm:px-2 sm:text-[10px]">
-              2026
+              B2B & B2C
             </span>
           </div>
 
-          {/* MODE SWITCHER */}
-          <div className="flex rounded-full border border-neutral-800 bg-neutral-950 p-1">
+          {/* MODE SWITCHER & CART */}
+          <div className="flex items-center gap-3">
+            <div className="flex rounded-full border border-neutral-800 bg-neutral-950 p-1">
+              <button
+                type="button"
+                onClick={() => setMode('b2c')}
+                className={`rounded-full px-2.5 py-1.5 text-[9px] font-bold tracking-wider transition sm:px-4 sm:text-xs ${
+                  mode === 'b2c'
+                    ? 'bg-white text-black'
+                    : 'text-neutral-500 hover:text-white'
+                }`}
+              >
+                RETAIL (B2C)
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode('b2b')}
+                className={`rounded-full px-2.5 py-1.5 text-[9px] font-bold tracking-wider transition sm:px-4 sm:text-xs ${
+                  mode === 'b2b'
+                    ? 'bg-white text-black'
+                    : 'text-neutral-500 hover:text-white'
+                }`}
+              >
+                WHOLESALE (B2B)
+              </button>
+            </div>
+
             <button
               type="button"
-              onClick={() => setMode('b2c')}
-              className={`rounded-full px-2.5 py-1.5 text-[9px] font-bold tracking-wider transition sm:px-4 sm:text-xs ${
-                mode === 'b2c'
-                  ? 'bg-white text-black'
-                  : 'text-neutral-500 hover:text-white'
-              }`}
+              onClick={() => setIsCartOpen(true)}
+              aria-label={`Open cart with ${totalUnits} items`}
+              className="flex shrink-0 items-center gap-1.5 rounded-full border border-neutral-800 bg-neutral-900 px-2.5 py-2 text-[10px] uppercase tracking-wider text-neutral-300 transition hover:border-neutral-600 hover:text-white sm:px-3.5"
             >
-              RETAIL
-            </button>
-            <button
-              type="button"
-              onClick={() => setMode('b2b')}
-              className={`rounded-full px-2.5 py-1.5 text-[9px] font-bold tracking-wider transition sm:px-4 sm:text-xs ${
-                mode === 'b2b'
-                  ? 'bg-white text-black'
-                  : 'text-neutral-500 hover:text-white'
-              }`}
-            >
-              WHOLESALE
+              <ShoppingBag size={14} />
+              <span>({totalUnits})</span>
             </button>
           </div>
-
-          {/* CART */}
-          <button
-            type="button"
-            onClick={() => setIsCartOpen(true)}
-            aria-label={`Open cart with ${totalUnits} items`}
-            className="flex shrink-0 items-center gap-1.5 rounded-full border border-neutral-800 bg-neutral-900 px-2.5 py-2 text-[10px] uppercase tracking-wider text-neutral-300 transition hover:border-neutral-600 hover:text-white sm:px-3.5"
-          >
-            <ShoppingBag size={14} />
-            <span>({totalUnits})</span>
-          </button>
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="mx-auto max-w-5xl px-5 py-16 text-center sm:px-6 md:py-24">
-        <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-950 px-3 py-1.5 text-[9px] uppercase tracking-[0.25em] text-neutral-400 sm:text-xs">
-          <Sparkles size={11} /> SS26 ARCHIVE DROP
+      {/* HERO / PAGE HEADER */}
+      <section className="mx-auto max-w-5xl px-5 py-12 text-center sm:px-6 md:py-16">
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-950 px-3 py-1.5 text-[9px] uppercase tracking-[0.25em] text-neutral-400 sm:text-xs">
+          <Sparkles size={11} /> DUAL-TIER CATALOG
         </div>
-        <h1 className="mb-6 text-4xl font-black uppercase tracking-tight text-white sm:text-5xl md:text-7xl">
-          VELVAR{' '}
-          <span className="font-light text-neutral-700"> {'//'} </span>{' '}
-          COLLECTION 2026
+        <h1 className="mb-4 font-serif text-3xl font-bold text-white sm:text-5xl md:text-6xl">
+          Latest Collection
         </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-xs font-light leading-6 text-neutral-400 sm:text-sm md:text-base">
-          Heavyweight silhouettes, architectural tailoring, and high-density cyberpunk graphics.
-          {mode === 'b2b'
-            ? ' Wholesale pricing is active with minimum order quantities.'
-            : ' Luxury streetwear designed for a distinctive modern silhouette.'}
+        <p className="mx-auto mb-6 max-w-2xl text-xs font-light leading-6 text-neutral-400 sm:text-sm md:text-base">
+          Explore our premium dual-tier catalog. Exclusive pricing available for both retail consumers and wholesale partners.
         </p>
 
         <div className="flex flex-wrap justify-center gap-2 font-mono text-[9px] uppercase tracking-wider sm:text-[10px]">
           <span className="rounded-full border border-neutral-800 bg-neutral-950 px-4 py-2 text-neutral-300">
-            {mode === 'b2b' ? 'WHOLESALE B2B ACTIVE' : 'RETAIL STOREFRONT ACTIVE'}
+            {mode === 'b2b' ? 'WHOLESALE MODE (B2B)' : 'RETAIL MODE (B2C)'}
           </span>
           <span className="rounded-full border border-neutral-800 bg-neutral-950 px-4 py-2 text-neutral-500">
-            USD ($)
+            CURRENCY: ৳ (BDT) / $ (USD)
           </span>
         </div>
       </section>
@@ -427,48 +422,59 @@ export default function HomePage() {
                 </div>
 
                 {/* PRODUCT INFO */}
-                <div className="flex min-h-[245px] flex-col justify-between p-5">
-                  <div>
-                    <div className="mb-2 flex items-center justify-between gap-3 text-[9px] uppercase tracking-widest text-neutral-600">
-                      <span> VELVAR {'//'} SS26 </span>
-                      <span className="truncate font-mono"> {product.id} </span>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="mb-4">
+                    <div className="mb-1.5 flex items-center justify-between text-[10px] font-mono uppercase tracking-widest text-neutral-500">
+                      <span>{product.category}</span>
+                      <span>MOQ: {product.moq}</span>
                     </div>
                     <button
                       type="button"
                       onClick={() => setSelectedProduct(product)}
-                      className="mb-2 text-left text-base font-bold leading-6 text-white transition hover:text-neutral-300"
+                      className="text-left font-sans text-lg font-bold leading-snug text-white transition hover:text-neutral-300 line-clamp-2"
                     >
                       {product.name}
                     </button>
-                    <p className="line-clamp-3 text-xs leading-5 text-neutral-400">
-                      {product.description}
-                    </p>
                   </div>
 
-                  {/* PRICE */}
-                  <div className="mt-5 flex items-end justify-between gap-3 border-t border-neutral-900 pt-4">
-                    <div>
-                      <div className="font-mono text-xl font-bold text-white">
-                        $ {getUnitPrice(product, mode).toFixed(2)}
-                        {mode === 'b2b' && (
-                          <span className="ml-1 text-xs font-normal text-neutral-500">
-                            /unit
-                          </span>
-                        )}
-                      </div>
-                      <div className="mt-1 text-[9px] uppercase tracking-wider text-neutral-500">
-                        {mode === 'b2b' ? `Minimum ${product.moq} pcs` : 'Single piece retail'}
-                      </div>
+                  {/* PRICING CONTAINER (Side-by-Side B2C and B2B) */}
+                  <div className="mb-6 mt-auto flex items-center gap-3">
+                    {/* Retail Price */}
+                    <div className={`flex-1 rounded-xl border p-3 text-center transition-all ${
+                      mode === 'b2c'
+                        ? 'border-white bg-neutral-900 shadow-md ring-1 ring-white/20'
+                        : 'border-neutral-800 bg-neutral-900/60'
+                    }`}>
+                      <span className="block text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1">
+                        Retail (B2C)
+                      </span>
+                      <span className="block text-lg font-black font-mono text-white">
+                        ৳{product.retailPrice}
+                      </span>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => addToCart(product)}
-                      className="flex shrink-0 items-center gap-1.5 rounded-lg bg-white px-3 py-2.5 text-[9px] font-black uppercase tracking-wider text-black transition hover:bg-neutral-200 active:scale-95 sm:px-4"
-                    >
-                      <Plus size={12} strokeWidth={3} />
-                      {mode === 'b2b' ? `Bulk ${product.moq}` : 'Add'}
-                    </button>
+                    {/* Wholesale Price */}
+                    <div className={`flex-1 rounded-xl border p-3 text-center transition-all ${
+                      mode === 'b2b'
+                        ? 'border-white bg-neutral-900 shadow-md ring-1 ring-white/20'
+                        : 'border-neutral-800 bg-neutral-900/60'
+                    }`}>
+                      <span className="block text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1">
+                        Wholesale (B2B)
+                      </span>
+                      <span className="block text-lg font-black font-mono text-white">
+                        ৳{product.wholesalePrice}
+                      </span>
+                    </div>
                   </div>
+
+                  {/* CTA Button */}
+                  <button
+                    type="button"
+                    onClick={() => addToCart(product)}
+                    className="w-full rounded-xl bg-white py-3.5 text-center font-sans text-sm font-semibold tracking-wide text-black shadow-sm transition hover:bg-neutral-200 active:scale-[0.98]"
+                  >
+                    Add to Cart {mode === 'b2b' ? `(${product.moq} pcs)` : ''}
+                  </button>
                 </div>
               </article>
             );
@@ -601,7 +607,7 @@ export default function HomePage() {
                               </button>
                             </div>
                             <span className="font-mono text-xs font-bold text-white">
-                              $ {(item.price * item.quantity).toFixed(2)}
+                              ৳{(item.price * item.quantity).toLocaleString()}
                             </span>
                           </div>
                         </div>
@@ -618,7 +624,7 @@ export default function HomePage() {
                 <div className="mb-2 flex justify-between text-xs text-neutral-500">
                   <span> Subtotal </span>
                   <span className="font-mono text-white">
-                    ${subtotal.toFixed(2)}
+                    ৳{subtotal.toLocaleString()}
                   </span>
                 </div>
                 <div className="mb-4 flex justify-between text-xs text-neutral-500">
@@ -627,7 +633,7 @@ export default function HomePage() {
                 </div>
                 <div className="mb-5 flex justify-between border-t border-neutral-900 pt-3 text-sm font-bold">
                   <span> Total </span>
-                  <span className="font-mono"> ${subtotal.toFixed(2)} </span>
+                  <span className="font-mono"> ৳{subtotal.toLocaleString()} </span>
                 </div>
                 <button
                   type="button"
@@ -722,10 +728,10 @@ export default function HomePage() {
                 <div className="mt-6 border-t border-neutral-900 pt-4">
                   <div className="mb-4 flex items-center justify-between gap-3">
                     <span className="text-xs text-neutral-500">
-                      Retail $ {selectedProduct.retailPrice.toFixed(2)}
+                      Retail ৳{selectedProduct.retailPrice}
                     </span>
                     <span className="font-mono text-sm font-bold text-white">
-                      B2B $ {selectedProduct.wholesalePrice.toFixed(2)} /u
+                      B2B ৳{selectedProduct.wholesalePrice} /unit
                     </span>
                   </div>
                   <button
